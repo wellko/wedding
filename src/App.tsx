@@ -1,5 +1,12 @@
-function App() {
+import {motion, useInView} from "framer-motion";
+import {useRef} from "react";
+import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
+import '@leenguyen/react-flip-clock-countdown/dist/index.css';
 
+
+function App() {
+    const texts = ['Сбылась наша мечта, и мы хотим разделить её с вами!\n' +
+    '                    Приглашаем вас на нашу свадьбу,', 'которая состоится 06.10.2025 в Bellagio Premium.', 'Ваше присутствие сделает этот день ещё более особенным.', 'С любовью и теплом,', 'Айнаргиз и Валерий']
     return (
         <div className={'max-w-[430px] mx-auto p-x-[20px] bg-[#EBECF0]'}>
             <div className={'flex items-center justify-center flex-col text-[#1F1F1F]'}>
@@ -13,18 +20,62 @@ function App() {
                 </div>
                 <h2 className={'wedding-text text-[60px]'}>19:00 | 06.10.2025 </h2>
             </div>
-            <div style={{ backgroundImage: "url('/white.JPG')" }} className={'rounded-2xl text-[30px] flex text-center wedding-inner-text items-center justify-center flex-col text-[#1F1F1F]'}>
-                <h1 className={'text-[40px] my-2 font-bold'}>Приглашение</h1>
-                <p>Сбылась наша мечта, и мы хотим разделить её с вами!
-                    Приглашаем вас на нашу свадьбу,
-                </p>
-                <p>
-                    которая состоится 06.10.2025 в Bellagio Premium.
-                </p><p>
-                Ваше присутствие сделает этот день ещё более особенным.
-            </p><p>
-                С любовью и теплом,</p><p>
-                Айнаргиз и Валерий</p>
+            <div style={{backgroundImage: "url('/white.JPG')"}}
+                 className={'rounded-2xl text-[30px] flex text-center wedding-inner-text items-center justify-center flex-col text-[#1F1F1F]'}>
+                <motion.h1 initial={{opacity: 0, y: 50}}
+                           whileInView={{opacity: 1, y: 0}}
+                           transition={{duration: 0.8}}
+                           viewport={{amount: 0.3}} className={'text-[40px] my-2 font-bold'}>Приглашение
+                </motion.h1>
+                {texts.map((text, i) => {
+                    const ref = useRef(null);
+                    const isInView = useInView(ref, {amount: 0.3});
+                    return (
+                        <motion.h1
+                            key={i}
+                            ref={ref}
+                            initial={{opacity: 0, y: -50}}
+                            animate={isInView ? {opacity: 1, y: 0} : {opacity: 0, y: -50}}
+                            transition={{duration: 1}}
+                            style={{marginBottom: "40px"}}
+                        >
+                            {text}
+                        </motion.h1>
+                    );
+                })}
+            </div>
+            <div className={'flex items-center justify-center flex-col text-[#1F1F1F] wedding-inner-text relative'}>
+                <img className={'rounded-2xl'} src={'./banquet.JPG'} alt={'party'}/>
+                <div
+                    className={'absolute bg-[#EBECF0] text-center text-[30px] left-[50%] -translate-x-[50%] w-[90%] rounded-2xl top-[10%]'}>
+                    <p>Место проведения</p>
+                    <p>Bellagio Premium.</p>
+                    <div className={'flex justify-center'}>
+                        <a target="_blank"
+                           rel="noopener noreferrer"
+                           href={'https://2gis.kg/bishkek/firm/70000001047984986?m=74.596991%2C42.872611%2F16'}>
+                            <img src={'./2gis.png'} className={'h-[50px]'} alt={'2gis'}/>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer"
+                           href={'https://www.google.com/maps/place/Bellagio+Premium/@42.8726079,74.595054,17z/data=!4m6!3m5!1s0x389eb758ee830d77:0x6d52df0c6b1c0b26!8m2!3d42.872604!4d74.5976289!16s%2Fg%2F11mb39sldm?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D'}>
+                            <img
+                                className={'h-[50px]'}
+                                src="./google.png"
+                                alt="Google Maps"
+                            /></a>
+                    </div>
+
+                </div>
+                <div
+                    className={'bg-[#EBECF0] text-center text-[30px] rounded-2xl absolute left-[50%] -translate-x-[50%] w-[90%] bottom-[10%]'}>
+                    До торжества осталось
+                    <div className={'flex justify-center translate-x-[10%] mt-5'}>
+                        <FlipClockCountdown digitBlockStyle={{width: 25, height: 40, fontSize: 30}}
+                                            to={new Date("2025-10-06T19:00:00+06:00")} className={'w-full'}/>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     )
