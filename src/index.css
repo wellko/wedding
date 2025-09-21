@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+    background: #EBECF0;
+}
+
+
+.wedding-text {
+    font-family: 'Comforter', cursive;
+}
+
+.wedding-inner-text {
+    font-family: 'PT Serif', serif;
+}
