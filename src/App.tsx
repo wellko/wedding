@@ -18,7 +18,7 @@ function App() {
                     <h2 className={'font-medium wedding-text text-[60px] absolute top-[270px] left-[50%] '}>Ainargiz</h2>
                     <img className={'object-fill rounded-2xl'} src={'./rings.JPG'} alt={'main'}/>
                 </div>
-                <h2 className={'wedding-text text-[60px]'}>19:00 | 06.10.2025 </h2>
+                <h2 className={'wedding-text text-[60px]'}>18:00 | 06.10.2025 </h2>
             </div>
             <div style={{backgroundImage: "url('/white.JPG')"}}
                  className={'rounded-2xl text-[15px] flex text-center wedding-inner-text items-center justify-center flex-col text-[#1F1F1F] px-[14px] py-[40px]'}>
@@ -72,7 +72,7 @@ function App() {
                     До торжества осталось
                     <div className={'flex justify-center translate-x-[10%] mt-5'}>
                         <FlipClockCountdown digitBlockStyle={{width: 25, height: 40, fontSize: 30}}
-                                            to={new Date("2025-10-06T19:00:00+06:00")} className={'w-full'}/>
+                                            to={new Date("2025-10-06T18:00:00+06:00")} className={'w-full'}/>
 
                     </div>
                 </div>
