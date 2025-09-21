@@ -6,26 +6,26 @@ import '@leenguyen/react-flip-clock-countdown/dist/index.css';
 
 function App() {
     const texts = ['Сбылась наша мечта, и мы хотим разделить её с вами!\n' +
-    '                    Приглашаем вас на нашу свадьбу,', 'которая состоится 06.10.2025 в Bellagio Premium.', 'Ваше присутствие сделает этот день ещё более особенным.', 'С любовью и теплом,', 'Айнаргиз и Валерий']
+    '                    Приглашаем вас на нашу свадьбу, которая состоится в', '', 'BELLAGIO PREMIUM', 'Ваше присутствие сделает этот день ещё более особенным.', 'С любовью и теплом,', 'Валерий и Айнаргиз ']
     return (
         <div className={'max-w-[430px] mx-auto p-x-[20px] bg-[#EBECF0]'}>
             <div className={'flex items-center justify-center flex-col text-[#1F1F1F]'}>
-                <h1 className={'wedding-text text-[80px] mt-5 font-semibold'}>Свадьба</h1>
+                <h1 className={'wedding-text text-[80px] mt-5 font-medium'}>Wedding day</h1>
                 <div className={'relative my-10'}>
                     {/*<h2 className={'wedding-text text-[80px] absolute left-[50%] -translate-x-1/2'}>Свадьба</h2>*/}
-                    <h2 className={'font-medium wedding-text text-[60px] absolute top-[120px] left-[50%] -translate-x-[150px]'}>Айнаргиз</h2>
-                    <h2 className={'font-medium wedding-text text-[70px] absolute top-[190px] left-[50%] -translate-x-1/2'}>и</h2>
-                    <h2 className={'font-medium wedding-text text-[60px] absolute top-[270px] left-[50%] '}>Валеры</h2>
+                    <h2 className={'font-medium wedding-text text-[60px] absolute top-[120px] left-[50%] -translate-x-[150px]'}>Valeriy</h2>
+                    <h2 className={'font-medium wedding-text text-[70px] absolute top-[190px] left-[50%] -translate-x-1/2'}>and</h2>
+                    <h2 className={'font-medium wedding-text text-[60px] absolute top-[270px] left-[50%] '}>Ainargiz</h2>
                     <img className={'object-fill rounded-2xl'} src={'./rings.JPG'} alt={'main'}/>
                 </div>
                 <h2 className={'wedding-text text-[60px]'}>19:00 | 06.10.2025 </h2>
             </div>
             <div style={{backgroundImage: "url('/white.JPG')"}}
-                 className={'rounded-2xl text-[30px] flex text-center wedding-inner-text items-center justify-center flex-col text-[#1F1F1F]'}>
+                 className={'rounded-2xl text-[17px] flex text-center wedding-inner-text items-center justify-center flex-col text-[#1F1F1F] px-[14px]'}>
                 <motion.h1 initial={{opacity: 0, y: 50}}
                            whileInView={{opacity: 1, y: 0}}
                            transition={{duration: 0.8}}
-                           viewport={{amount: 0.3}} className={'text-[40px] my-2 font-bold'}>Приглашение
+                           viewport={{amount: 0.3}} className={'text-[40px] my-2 font-medium mt-[20px]'}>ПРИГЛАШЕНИЕ
                 </motion.h1>
                 {texts.map((text, i) => {
                     const ref = useRef(null);
@@ -38,6 +38,7 @@ function App() {
                             animate={isInView ? {opacity: 1, y: 0} : {opacity: 0, y: -50}}
                             transition={{duration: 1}}
                             style={{marginBottom: "40px"}}
+                            className={`${text.includes('BELLAGIO') && 'text-[30px]'}`}
                         >
                             {text}
                         </motion.h1>
@@ -47,9 +48,9 @@ function App() {
             <div className={'flex items-center justify-center flex-col text-[#1F1F1F] wedding-inner-text relative'}>
                 <img className={'rounded-2xl'} src={'./banquet.JPG'} alt={'party'}/>
                 <div
-                    className={'absolute bg-[#EBECF0] text-center text-[30px] left-[50%] -translate-x-[50%] w-[90%] rounded-2xl top-[10%]'}>
-                    <p>Место проведения</p>
-                    <p>Bellagio Premium.</p>
+                    className={'absolute bg-[#EBECF0] text-center text-[25px] left-[50%] -translate-x-[50%] w-[90%] rounded-2xl top-[10%]'}>
+                    <p className={'text-[24px]'}>ADDRESS:</p>
+                    {/*<p>Bellagio Premium.</p>*/}
                     <div className={'flex justify-center'}>
                         <a target="_blank"
                            rel="noopener noreferrer"
