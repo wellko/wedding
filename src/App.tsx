@@ -50,7 +50,7 @@ function App() {
                 <div
                     className={'absolute bg-[#EBECF0] text-center text-[25px] left-[50%] -translate-x-[50%] w-[90%] rounded-2xl top-[10%]'}>
                     <p className={'text-[24px]'}>ADDRESS:</p>
-                    {/*<p>Bellagio Premium.</p>*/}
+                    <p className={'text-[16px]'}>г. Бишкек Улица Токтогула, 125/1</p>
                     <div className={'flex justify-center'}>
                         <a target="_blank"
                            rel="noopener noreferrer"
