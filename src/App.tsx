@@ -21,11 +21,11 @@ function App() {
                 <h2 className={'wedding-text text-[60px]'}>19:00 | 06.10.2025 </h2>
             </div>
             <div style={{backgroundImage: "url('/white.JPG')"}}
-                 className={'rounded-2xl text-[17px] flex text-center wedding-inner-text items-center justify-center flex-col text-[#1F1F1F] px-[14px]'}>
+                 className={'rounded-2xl text-[15px] flex text-center wedding-inner-text items-center justify-center flex-col text-[#1F1F1F] px-[14px] py-[40px]'}>
                 <motion.h1 initial={{opacity: 0, y: 50}}
                            whileInView={{opacity: 1, y: 0}}
                            transition={{duration: 0.8}}
-                           viewport={{amount: 0.3}} className={'text-[40px] my-2 font-medium mt-[20px]'}>ПРИГЛАШЕНИЕ
+                           viewport={{amount: 0.3}} className={'text-[37px] my-2 font-medium mt-[20px]'}>ПРИГЛАШЕНИЕ
                 </motion.h1>
                 {texts.map((text, i) => {
                     const ref = useRef(null);
@@ -38,7 +38,7 @@ function App() {
                             animate={isInView ? {opacity: 1, y: 0} : {opacity: 0, y: -50}}
                             transition={{duration: 1}}
                             style={{marginBottom: "40px"}}
-                            className={`${text.includes('BELLAGIO') && 'text-[30px]'}`}
+                            className={`${text.includes('BELLAGIO') && 'text-[30px]'} ${text.includes('Валерий') && 'text-[23px] font-medium'}`}
                         >
                             {text}
                         </motion.h1>
@@ -77,6 +77,9 @@ function App() {
                     </div>
                 </div>
 
+                <div>
+                    <div className={'w-[50px] h-[50px]'}></div>
+                </div>
             </div>
         </div>
     )

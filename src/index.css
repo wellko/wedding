@@ -10,5 +10,8 @@
 }
 
 .wedding-inner-text {
-    font-family: 'PT Serif', serif;
+    font-family: 'Roboto Light', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
 }
