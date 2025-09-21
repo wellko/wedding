@@ -55,12 +55,12 @@ function App() {
                         <a target="_blank"
                            rel="noopener noreferrer"
                            href={'https://2gis.kg/bishkek/firm/70000001047984986?m=74.596991%2C42.872611%2F16'}>
-                            <img src={'./2gis.png'} className={'h-[50px]'} alt={'2gis'}/>
+                            <img src={'./2gis.png'} className={'h-[50px] grayscale'} alt={'2gis'}/>
                         </a>
                         <a target="_blank" rel="noopener noreferrer"
                            href={'https://www.google.com/maps/place/Bellagio+Premium/@42.8726079,74.595054,17z/data=!4m6!3m5!1s0x389eb758ee830d77:0x6d52df0c6b1c0b26!8m2!3d42.872604!4d74.5976289!16s%2Fg%2F11mb39sldm?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D'}>
                             <img
-                                className={'h-[50px]'}
+                                className={'h-[50px] grayscale'}
                                 src="./google.png"
                                 alt="Google Maps"
                             /></a>
@@ -76,10 +76,42 @@ function App() {
 
                     </div>
                 </div>
+            </div>
+            <div className={'flex items-center justify-center flex-col text-[#1F1F1F]'}>
+                <motion.h1
+                    initial={{opacity: 0, y: -50}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 1}}
+                    style={{marginBottom: "40px"}}
+                    className={'wedding-text text-[58px] text-center'}>Dress Code
+                </motion.h1>
+                <motion.p
+                    initial={{opacity: 0, y: -50}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 1}}
+                    className={'text-[14px] uppercase inline-block w-[200px] text-center'}>Нам будет очень
+                    приятно, если Ваш наряд будет
+                </motion.p>
+                <motion.p
+                    initial={{opacity: 0, y: -50}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 1}}
+                    style={{marginBottom: "40px"}}
+                    className={'text-[14px] uppercase inline-block w-[270px] text-center'}>соответствовать
+                    цветовой гамме нашей свадьбы
+                </motion.p>
+                <motion.div
+                    initial={{opacity: 0, y: -50}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 1}}
+                    style={{marginBottom: "40px"}} className={'flex gap-[10px] mt-[20px]'}>
+                    <div className={'w-[50px] h-[50px] rounded-[50%] bg-[#f5f7eb]'}></div>
+                    <div className={'w-[50px] h-[50px] rounded-[50%] bg-[#c9c0b5]'}></div>
+                    <div className={'w-[50px] h-[50px] rounded-[50%] bg-[#405d4e]'}></div>
+                    <div className={'w-[50px] h-[50px] rounded-[50%] bg-[#2a382f]'}></div>
+                    <div className={'w-[50px] h-[50px] rounded-[50%] bg-[#000]'}></div>
+                </motion.div>
 
-                <div>
-                    <div className={'w-[50px] h-[50px]'}></div>
-                </div>
             </div>
         </div>
     )
