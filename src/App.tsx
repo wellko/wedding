@@ -6,7 +6,7 @@ import '@leenguyen/react-flip-clock-countdown/dist/index.css';
 
 function App() {
     const texts = ['Сбылась наша мечта, и мы хотим разделить её с вами!\n' +
-    '                    Приглашаем вас на нашу свадьбу, которая состоится в', '', 'BELLAGIO PREMIUM', 'Ваше присутствие сделает этот день ещё более особенным.', 'С любовью и теплом,', 'Валерий и Айнаргиз ']
+    '                    Приглашаем вас на нашу свадьбу, которая состоится в', '', 'BELLAGIO BANQUET HALL', 'Ваше присутствие сделает этот день ещё более особенным.', 'С любовью и теплом,', 'Валерий и Айнаргиз ']
     return (
         <div className={'max-w-[430px] mx-auto p-x-[20px] bg-[#EBECF0]'}>
             <div className={'flex items-center justify-center flex-col text-[#1F1F1F]'}>
@@ -50,15 +50,15 @@ function App() {
                 <div
                     className={'absolute bg-[#EBECF0] text-center text-[25px] left-[50%] -translate-x-[50%] w-[90%] rounded-2xl top-[10%]'}>
                     <p className={'text-[24px]'}>ADDRESS:</p>
-                    <p className={'text-[16px]'}>г. Бишкек Улица Токтогула, 125/1</p>
+                    <p className={'text-[16px]'}>г. Бишкек Улица Льва Толстого, 36к/1</p>
                     <div className={'flex justify-center'}>
                         <a target="_blank"
                            rel="noopener noreferrer"
-                           href={'https://2gis.kg/bishkek/firm/70000001047984986?m=74.596991%2C42.872611%2F16'}>
+                           href={'https://2gis.kg/bishkek/branches/70000001035315187?m=74.631994%2C42.86531%2F16'}>
                             <img src={'./2gis.png'} className={'h-[50px] grayscale'} alt={'2gis'}/>
                         </a>
                         <a target="_blank" rel="noopener noreferrer"
-                           href={'https://www.google.com/maps/place/Bellagio+Premium/@42.8726079,74.595054,17z/data=!4m6!3m5!1s0x389eb758ee830d77:0x6d52df0c6b1c0b26!8m2!3d42.872604!4d74.5976289!16s%2Fg%2F11mb39sldm?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D'}>
+                           href={'https://www.google.com/maps/place/Bellagio+Banquet+Hall/@42.8653756,74.6293144,17z/data=!3m1!4b1!4m6!3m5!1s0x389eb75e68e2dadd:0xf12c266ce1443ca0!8m2!3d42.8653717!4d74.6318893!16s%2Fg%2F11fj_052p3?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D'}>
                             <img
                                 className={'h-[50px] grayscale'}
                                 src="./google.png"
